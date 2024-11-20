@@ -6,10 +6,13 @@ function makeGrid (){
     for(let i = 0; i < number*number; i++){
         const div = document.createElement("div");
         container.appendChild(div);
-        div.style.cssText = `width: calc(800px/${number}); height: calc(800px/${number}); border: 1px solid red;`;
+        div.style.cssText = `width: calc(640px/${number}); height: calc(640px/${number}); border: 1px solid lightgrey;`;
         div.addEventListener("mouseover", () => {
-            div.style.backgroundColor = "blue";
-        } )
+            let colorValueRed = Math.floor(Math.random()*256);
+            let colorValueGreen = Math.floor(Math.random()*256);
+            let colorValueBlue = Math.floor(Math.random()*256);
+            div.style.backgroundColor = `rgb(${colorValueRed}, ${colorValueGreen}, ${colorValueBlue})`;
+        } );
     }
 }
 
@@ -33,7 +36,3 @@ button.addEventListener("click", () => {
     deleteChild();
     makeGrid ();
 });
-
-
-
-
