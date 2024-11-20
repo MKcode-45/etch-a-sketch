@@ -28,7 +28,7 @@ function deleteChild() {
 
 const button = document.querySelector("#reset");
 button.addEventListener("click", () => {
-    number = prompt("Enter a number between 1 - 100.");
+    number = prompt("Enter a number between 1 - 100 to generate your own custom grid.");
     number = Number(number);
     if(number < 1 || number > 100){
         return alert("Please enter a number between 1 and 100.")
